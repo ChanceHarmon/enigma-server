@@ -13,9 +13,9 @@ const DATABASE_URL = process.env.DATABASE_URL;
 const client = new pg.Client(DATABASE_URL);
 client.on('error', err => console.error(err));
 
-const rotorOne = require('./original-rotors/rotor-1.js');
-const rotorTwo = require('./original-rotors/rotor-2.js');
-const rotorThree = require('./original-rotors/rotor-3.js');
+const rotorOne = require('./original-rotors/rotorI.js');
+const rotorTwo = require('./original-rotors/rotorII.js');
+const rotorThree = require('./original-rotors/rotorIII.js');
 
 app.use(cors());
 
