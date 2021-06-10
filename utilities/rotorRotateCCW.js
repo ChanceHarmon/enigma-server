@@ -9,7 +9,7 @@ const rotorRotateCCW = rotor => {
 
     let tempOut = rotor.positions.outputSchedule.shift()
     rotor.positions.outputSchedule.push(tempOut)
-
+    console.log('in ccw after turn', rotor.positions)
     return rotor
 }
 

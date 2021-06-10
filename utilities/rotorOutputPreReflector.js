@@ -5,7 +5,10 @@
 // Decided to make the output contain both the index and value, might be more useful to have both in other functions
 
 const rotorOutputPreReflector = (rotor, input) => {
-
+    console.log('in pre', input, rotor.positions)
+    if (Array.isArray(input)) {
+        input = input[1]
+    }
     const { positions } = rotor;
 
     for (let i = 0; i < positions.inputSchedule.length; i++) {
