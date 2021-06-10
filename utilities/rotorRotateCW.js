@@ -1,6 +1,6 @@
 'use strict';
 
-const rotorI = require('../original-rotors/rotorI.js')
+// const rotorI = require('../original-rotors/rotorI.js')
 
 const rotorRotateCW = rotor => {
     // console.log('in CW', rotor.positions)
@@ -15,4 +15,4 @@ const rotorRotateCW = rotor => {
 
 module.exports = rotorRotateCW;
 
-console.log('final cw output', rotorRotateCW(rotorI))
+// console.log('final cw output', rotorRotateCW(rotorI))
