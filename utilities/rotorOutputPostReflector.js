@@ -1,6 +1,7 @@
 'use strict';
 
 const rotorOne = require('../original-rotors/rotorI.js');
+const inputSwapper = require('./inputSwapper.js')
 
 // Decided to make the output contain both the index and value, might be more useful to have both in other functions
 
