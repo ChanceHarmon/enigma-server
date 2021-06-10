@@ -3,7 +3,7 @@
 // const rotorI = require('../original-rotors/rotorI.js')
 
 const rotorRotateCCW = rotor => {
-
+    console.log('in CCW', rotor.positions)
     let tempIn = rotor.positions.inputSchedule.shift()
     rotor.positions.inputSchedule.push(tempIn)
 
