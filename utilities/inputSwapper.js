@@ -30,10 +30,20 @@ const legend = {
 }
 
 const inputSwapper = (input) => {
-    // console.log(legend[`${input}`])
-    return legend[`${input}`];
+    if (typeof input === 'number') {
+        // console.log('in text swapper', input, Object.values(legend))
+        for (let i = 0; i < 26; i++) {
+            if (input === Object.values(legend)[i]) {
+                // console.log('hello', Object.keys(legend)[i])
+                return Object.keys(legend)[i]
+            }
+        }
+    } else {
+        // console.log('input swapper', legend[`${input}`])
+        return legend[`${input}`];
+    }
 }
 
 module.exports = inputSwapper;
 
-// console.log(inputSwapper('Z'))
+// console.log('return', inputSwapper('F'))

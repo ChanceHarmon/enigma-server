@@ -7,19 +7,23 @@ const inputSwapper = require('./inputSwapper.js')
 
 const rotorOutputPostReflector = (rotor, input) => {
 
+    console.log('in post', input)
     const { positions } = rotor;
-
-    for (let i = 0; i < positions.outputSchedule.length; i++) {
-        if (positions.outputSchedule[i][0] === input) {
-            let mapToCharacter = positions.outputSchedule[i][1]
-            for (let j = 0; j < positions.inputSchedule.length; j++) {
-                if (positions.inputSchedule[j][0] === mapToCharacter) {
-                    return [j, mapToCharacter]
-                }
-            }
+    if (typeof input !== 'number') {
+        // console.log('test')
+        input = inputSwapper(input)
+    }
+    // console.log('still in post', input, positions.outputSchedule)
+    let firstPath = positions.outputSchedule[input][1];
+    let outputIndex;
+    for (let i = 0; i < positions.inputSchedule.length; i++) {
+        if (positions.inputSchedule[i][0] === firstPath) {
+            outputIndex = i;
+            break
         }
     }
+    return outputIndex;
 }
 
 module.exports = rotorOutputPostReflector;
-console.log(rotorOutputPostReflector(rotorOne, 'B'))
+// console.log(rotorOutputPostReflector(rotorOne, 'A'))
