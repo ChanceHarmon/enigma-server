@@ -7,7 +7,7 @@ const inputSwapper = require('./inputSwapper.js')
 
 const rotorOutputPostReflector = (rotor, input) => {
 
-    console.log('in post', input)
+    // console.log('in post', input)
     const { positions } = rotor;
     if (typeof input !== 'number') {
         // console.log('test')

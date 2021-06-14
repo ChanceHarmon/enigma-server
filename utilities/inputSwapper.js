@@ -30,8 +30,8 @@ const legend = {
 }
 
 const inputSwapper = (input) => {
+    // console.log('in text swapper', input)
     if (typeof input === 'number') {
-        // console.log('in text swapper', input, Object.values(legend))
         for (let i = 0; i < 26; i++) {
             if (input === Object.values(legend)[i]) {
                 // console.log('hello', Object.keys(legend)[i])

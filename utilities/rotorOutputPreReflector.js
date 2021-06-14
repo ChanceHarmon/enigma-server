@@ -6,7 +6,7 @@ const inputSwapper = require('./inputSwapper.js')
 // Decided to make the output contain both the index and value, might be more useful to have both in other functions
 
 const rotorOutputPreReflector = (rotor, input) => {
-    console.log('in pre', input)
+    // console.log('in pre', input)
     const { positions } = rotor;
     if (typeof input !== 'number') {
         input = inputSwapper(input)
@@ -45,4 +45,4 @@ const rotorOutputPreReflector = (rotor, input) => {
 // }
 
 module.exports = rotorOutputPreReflector;
-console.log(rotorOutputPreReflector(rotorOne, 'A'))
+// console.log(rotorOutputPreReflector(rotorOne, 'A'))
