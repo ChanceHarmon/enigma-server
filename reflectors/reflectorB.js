@@ -15,4 +15,12 @@ const reflectorB = {
     'T': 'Z',
     'V': 'W'
 }
-module.exports = reflectorB;
+
+const reflect = (input) => {
+    for (let i = 0; i < 26; i++) {
+        if (input === Object.keys(reflectorB)[i]) {
+            return Object.values(reflectorB)[i]
+        }
+    }
+}
+module.exports = reflect;
