@@ -1,5 +1,4 @@
 'use strict';
-// need swapper, configs eventually for different rotors, pre func, post func, return func => prob the swap func
 
 const rotorI = require('../original-rotors/rotorI.js')
 const rotorII = require('../original-rotors/rotorII.js')

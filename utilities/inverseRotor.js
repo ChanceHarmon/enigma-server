@@ -7,6 +7,6 @@ const inverseRotor = arr => {
     })
     return newArr
 }
-console.log(inverseRotor(startArr))
+// console.log(inverseRotor(startArr))
 
 module.exports = inverseRotor;
