@@ -1,5 +1,20 @@
 'use strict';
 
+/*
+Function Purpose:
+    Take in a character between A - Z, and convert it to an number based on key value map.
+    Number is used as an index during other functions.
+
+Function Input:
+    String: A - Z
+
+Function Output:
+    Number: 0 - 25
+
+Run Function:
+    Comment in the console.log at the bottom of the file, and use your favorite way to `run` a file in node.
+*/
+
 const legend = {
     'A': 0,
     'B': 1,

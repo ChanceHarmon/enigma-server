@@ -1,5 +1,7 @@
 'use strict';
 
+// Need to revist this, it works in testing, but the input and values of positive or negative may change completely. No new notes currently
+
 const rotorI = require('../original-rotors/rotorI.js')
 
 //Helper functions to vertically rotate indexes

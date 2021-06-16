@@ -1,7 +1,7 @@
 'use strict';
-
-// Not quite sure how to use these the best, but want to get the orginal wirings down in code
-
+/*
+All Information for Rotor configs taken from https://www.codesandciphers.org.uk/enigma/rotorspec.htm for historical accuracy
+*/
 const rotorII = {
     start_position: 0,
     offset: 0,

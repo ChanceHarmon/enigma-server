@@ -3,6 +3,21 @@
 const rotorOne = require('../original-rotors/rotorI.js');
 const inputSwapper = require('./inputSwapper.js')
 
+/*
+Function Purpose:
+    Take in a rotor and input, and return an index.
+
+Function Input:
+    Rotor: Assumes all configs have already been set for the rotor.
+    Input: Index to locate on the rotor outputSchedule. 
+
+Function Output:
+    Index: Index of inputSchedule on rotor.
+
+Run Function:
+    Comment in the last line of code, run file. 
+*/
+
 const rotorOutputPostReflector = (rotor, input) => {
     const { positions } = rotor;
     if (typeof input !== 'number') {

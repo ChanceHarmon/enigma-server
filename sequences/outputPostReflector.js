@@ -9,6 +9,7 @@ const inputSwapper = require('../utilities/inputSwapper.js')
 // const rotorArray = [rotorI, rotorII, rotorIII]
 
 const outputPostReflector = (arr, input) => {
+    //Reverse rotor locations to simulate going back up the rotors
     arr = arr.reverse()
     let wheelOutput = inputSwapper(input);
     // send output of first rotor to next rotor
