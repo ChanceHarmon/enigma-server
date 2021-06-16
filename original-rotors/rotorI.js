@@ -1,4 +1,7 @@
 'use strict';
+/*
+All Information for Rotor configs taken from https://www.codesandciphers.org.uk/enigma/rotorspec.htm for historical accuracy
+*/
 
 const rotorI = {
     start_position: 0,

@@ -1,5 +1,23 @@
 'use strict';
 
+/*
+All Information for Reflector configs taken from https://www.codesandciphers.org.uk/enigma/rotorspec.htm for historical accuracy
+*/
+
+/*
+Function Purpose:
+    Take in an input of A-Z, and return the value of the corresponding key.
+
+Function Input:
+    Input: Character A-Z
+
+Function Output:
+    Output: Character A-Z
+
+Run Function:
+    Comment in the last line of code and the required file above, run file. 
+*/
+
 const reflectorB = {
     'A': 'Y',
     'B': 'R',
@@ -24,3 +42,5 @@ const reflect = (input) => {
     }
 }
 module.exports = reflect;
+
+//console.log(reflect('A'))

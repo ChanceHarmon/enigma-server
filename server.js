@@ -1,5 +1,12 @@
 'use strict';
 
+/*
+Currently server is just a skeleton.
+It does respond to basic requests.
+It does connect to a postgres DB if you have one locally you can setup in your enviroment variables.
+
+*/
+
 require('dotenv').config();
 const express = require('express');
 const app = express();
@@ -28,3 +35,4 @@ client.connect()
             console.log(`Crackin Up ${PORT}`)
         });
     });
+

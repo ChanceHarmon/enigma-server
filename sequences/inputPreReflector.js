@@ -11,13 +11,15 @@ const inputSwapper = require('../utilities/inputSwapper.js')
 // const rotorArray = [rotorI, rotorII, rotorIII]
 
 const inputPreReflector = (arr, input) => {
-
+    //Convert Char to Index
     let wheelOutput = inputSwapper(input);
     // send output of first rotor to next rotor
     for (let i = 0; i < arr.length; i++) {
         wheelOutput = rotorOutputPreReflector(arr[i], wheelOutput)
     }
+    //Convert final index output to character
     let characterBeforeReflector = arr[arr.length - 1].positions.outputSchedule[wheelOutput][0]
+    //Return character for reflector
     return characterBeforeReflector;
 };
 

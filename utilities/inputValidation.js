@@ -1,6 +1,7 @@
 'use strict';
 // Not sure if I am going to use this yet, it was needed at a certain point for testing.
 // It works though, so I don't want to waste it yet.
+// Most likely will eliminate the need for this on the front end inputs.
 
 const validateInput = (sequence, input) => {
 
