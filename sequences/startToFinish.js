@@ -28,3 +28,5 @@ const startToFinish = (rotors, input) => {
 
 module.exports = startToFinish;
 console.log('start to finish', startToFinish(rotorArray, 'A'))
+
+
