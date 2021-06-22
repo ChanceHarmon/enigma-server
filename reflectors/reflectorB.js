@@ -35,11 +35,13 @@ const reflectorB = {
 }
 
 const reflect = (input) => {
+    // console.log('in reflector', input)
     for (let i = 0; i < 26; i++) {
         if (input === Object.keys(reflectorB)[i]) {
             return Object.values(reflectorB)[i]
         }
     }
+    return input;
 }
 module.exports = reflect;
 
