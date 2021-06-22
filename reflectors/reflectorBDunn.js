@@ -38,5 +38,6 @@ const reflect = (input) => {
             return Object.values(reflectorBDunn)[i]
         }
     }
+    return input;
 }
 module.exports = reflect;
