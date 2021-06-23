@@ -35,13 +35,30 @@ const reflectorB = {
 }
 
 const reflect = (input) => {
-    // console.log('in reflector', input)
-    for (let i = 0; i < 26; i++) {
-        if (input === Object.keys(reflectorB)[i]) {
-            return Object.values(reflectorB)[i]
-        }
+    console.log('in reflector', input)
+
+
+    if (Object.keys(reflectorB).includes(input)) {
+        let checkKeys = Object.values(reflectorB)[Object.keys(reflectorB).indexOf(input)]
+        console.log(checkKeys)
+        return checkKeys
+    } else if (Object.values(reflectorB).includes(input)) {
+        let checkValues = Object.keys(reflectorB)[Object.values(reflectorB).indexOf(input)]
+        console.log(checkValues)
+        return checkValues
+    } else {
+        console.log('not part of reflector');
+        return input;
     }
-    return input;
+
+
+
+    // for (let i = 0; i < 26; i++) {
+    //     if (input === Object.keys(reflectorB)[i]) {
+    //         return Object.values(reflectorB)[i]
+    //     }
+    // }
+    // return input;
 }
 module.exports = reflect;
 
