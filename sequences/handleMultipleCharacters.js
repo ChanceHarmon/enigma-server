@@ -51,7 +51,7 @@ const handleMultipleCharacters = (str, rotors) => {
 }
 // NC  BE M
 module.exports = handleMultipleCharacters;
-console.log('handle multi', handleMultipleCharacters('YOSH', rotorArray))
+console.log('handle multi', handleMultipleCharacters('YO', rotorArray))
 // console.log('handle multi', handleMultipleCharacters('gregor', rotorArray))
 // console.log('handle multi', handleMultipleCharacters('Hound', rotorArray))
 // console.log('handle multi', handleMultipleCharacters('Hello World', rotorArray))
