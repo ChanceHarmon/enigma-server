@@ -13,7 +13,7 @@ const inputSwapper = require('../utilities/inputSwapper.js')
 const inputPreReflector = (arr, input) => {
     //Convert Char to Index
     let wheelOutput = inputSwapper(input);
-    console.log('made it to inputPreReflector', input, wheelOutput)
+    // console.log('made it to inputPreReflector', input, wheelOutput)
     // send output of first rotor to next rotor
     for (let i = 0; i < arr.length; i++) {
         // console.log(arr[i])

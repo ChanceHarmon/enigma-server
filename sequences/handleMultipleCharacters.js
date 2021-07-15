@@ -32,16 +32,21 @@ const handleMultipleCharacters = (str, rotors) => {
     removePunksKeepSpacing = removePunksKeepSpacing.toUpperCase()
 
     let message = '';
+    let rotorSet = rotors;
 
     for (let i = 0; i < removePunksKeepSpacing.length; i++) {
         if (removePunksKeepSpacing[i] === ' ') {
-            console.log('space', removePunksKeepSpacing[i])
+
             message += removePunksKeepSpacing[i];
+
         } else {
-            console.log('char', removePunksKeepSpacing[i])
-            rotors[0] = rotorRotateCCW(rotors[0])
-            let encodedChar = startToFinish(rotors, removePunksKeepSpacing[i])
-            console.log(encodedChar)
+
+            rotorSet[0] = rotorRotateCCW(rotorSet[0])
+
+            let encodedChar = startToFinish(rotorSet, removePunksKeepSpacing[i])
+
+            //I may move this reverse call to the startToFinish function, but for now it will stay here. Never forget this bug!!! The rotorSet is mutated at this point. You have to re-reverse it to get the next cycle to work as intended.
+            rotorSet = rotorSet.reverse()
             message += encodedChar;
         }
     }
@@ -51,8 +56,5 @@ const handleMultipleCharacters = (str, rotors) => {
 }
 // NC  BE M
 module.exports = handleMultipleCharacters;
-console.log('handle multi', handleMultipleCharacters('YO', rotorArray))
-// console.log('handle multi', handleMultipleCharacters('gregor', rotorArray))
-// console.log('handle multi', handleMultipleCharacters('Hound', rotorArray))
-// console.log('handle multi', handleMultipleCharacters('Hello World', rotorArray))
+console.log('handle multi', handleMultipleCharacters('AB', rotorArray))
 
