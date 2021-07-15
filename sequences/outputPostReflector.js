@@ -13,7 +13,7 @@ const outputPostReflector = (arr, input) => {
     arr = arr.reverse()
     let wheelOutput = inputSwapper(input);
     // send output of first rotor to next rotor
-    console.log(wheelOutput, input)
+    // console.log('output post reflector', wheelOutput, input)
     for (let i = 0; i < arr.length; i++) {
         wheelOutput = rotorOutputPostReflector(arr[i], wheelOutput)
     }

@@ -23,7 +23,7 @@ const rotorOutputPreReflector = (rotor, input) => {
     if (typeof input !== 'number') {
         input = inputSwapper(input)
     }
-    console.log('in pre reflector', input, positions)
+    // console.log('in pre reflector', input, positions)
     let firstPath = positions.inputSchedule[input][1];
     let outputIndex;
     for (let i = 0; i < positions.outputSchedule.length; i++) {
