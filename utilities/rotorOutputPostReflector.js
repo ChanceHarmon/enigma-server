@@ -37,3 +37,4 @@ const rotorOutputPostReflector = (rotor, input) => {
 
 module.exports = rotorOutputPostReflector;
 // console.log(rotorOutputPostReflector(rotorOne, 'A'))
+
