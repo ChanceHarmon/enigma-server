@@ -5,7 +5,7 @@
 // const rotorIII = require('../original-rotors/rotorIII.js')
 const inputPreReflector = require('./inputPreReflector.js')
 const outputPostReflector = require('./outputPostReflector.js')
-const reflector = require('../reflectors/ReflectorB.js');
+const reflector = require('../reflectors/reflectorB.js');
 const decodePreReflector = require('./decodePreReflector.js');
 const decodePostReflector = require('./decodePostReflector.js');
 // const rotorRotateCCW = require('../utilities/rotorRotateCCW.js')
