@@ -22,7 +22,7 @@ const inputPreReflector = (arr, input) => {
     //Convert final index output to character
     let characterBeforeReflector = arr[arr.length - 1].positions.outputSchedule[wheelOutput][0]
     //Return character for reflector
-    console.log('encoded char before reflector', characterBeforeReflector)
+    // console.log('encoded char before reflector', characterBeforeReflector)
     return characterBeforeReflector;
 };
 

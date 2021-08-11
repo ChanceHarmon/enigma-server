@@ -16,14 +16,14 @@ const decodePostReflector = (rotors, input) => {
     }
 
     let startIndex = findStartIndex(input);
-    console.log('in decode post relfector', startIndex)
+    // console.log('in decode post relfector', startIndex)
 
     for (let i = 0; i < rotors.length; i++) {
         startIndex = rotorOutputPostReflector(rotors[i], startIndex)
     }
 
     // let decodedCharacter = startIndex === 0 ? rotors[rotors.length - 1].positions.inputSchedule[inputSchedule.length - 1][0] : rotors[rotors.length - 1].positions.inputSchedule[startIndex - 1][0]
-    console.log('right before decoded character', startIndex)
+    // console.log('right before decoded character', startIndex)
     let decodedCharacter = startIndex === 0 ? rotors[rotors.length - 1].positions.outputSchedule[25][0] : rotors[rotors.length - 1].positions.outputSchedule[startIndex - 1][0]
 
     return decodedCharacter;

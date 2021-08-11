@@ -35,9 +35,9 @@ const reflectorB = {
 }
 
 const reflectReverse = (input) => {
-    console.log('in reverse reflector', input)
+    // console.log('in reverse reflector', input)
     for (let i = 0; i < 26; i++) {
-        console.log(Object.values(reflectorB)[i], Object.keys(reflectorB)[i])
+        // console.log(Object.values(reflectorB)[i], Object.keys(reflectorB)[i])
         if (input === Object.keys(reflectorB)[i]) {
             return Object.values(reflectorB)[i]
         }

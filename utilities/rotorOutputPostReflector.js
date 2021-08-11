@@ -23,7 +23,7 @@ const rotorOutputPostReflector = (rotor, input) => {
     if (typeof input !== 'number') {
         input = inputSwapper(input)
     }
-    console.log('post reflector', input, positions.outputSchedule)
+    // console.log('post reflector', input, positions.outputSchedule)
     let firstPath = positions.outputSchedule[input][1];
     let outputIndex;
     for (let i = 0; i < positions.inputSchedule.length; i++) {

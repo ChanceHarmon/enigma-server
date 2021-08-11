@@ -12,13 +12,13 @@ const reflector = require('../reflectors/reflectorB.js')
 
 const startToFinish = (rotors, input) => {
     //Logging for visual input compared to output in terminal
-    console.log('original input', input)
+    // console.log('original input', input)
     //Historically the original enigma machine rotated the first rotor in the sequence before the 'key' actually made contact. So 'A' becomes 'B' before it is ever sent through the rotors.
     // rotors[0] = rotorRotateCCW(rotors[0])
 
     // Input moves through the rotors toward the reflector
     let downTheRabbitHole = inputPreReflector(rotors, input);
-    console.log('down the rabbithole', downTheRabbitHole)
+    // console.log('down the rabbithole', downTheRabbitHole)
     //Input is converted per reflector specifications
     let outputChar = reflector(downTheRabbitHole);
     //Input is now sent back up the rotors towards final output

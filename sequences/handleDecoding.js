@@ -25,9 +25,10 @@ Run Function:
 */
 
 const handleDecoding = (input, rotors) => {
+    console.log('original input', input)
     //set rotors up
     rotors = setReverseRotorRotations(input, rotors);
-    console.log('rotors after string reverse', rotors[0].positions.inputSchedule)
+    // console.log('rotors after string reverse', rotors[0].positions.inputSchedule)
     //I think I need to loop backwards from the end of the input, so this is just a thought/test loop compared to output
     let message = '';
 
@@ -37,7 +38,7 @@ const handleDecoding = (input, rotors) => {
             message += input[i];
         } else {
             let encodedChar = finishToStart(rotors, input[i])
-            console.log('encoded char', encodedChar)
+            // console.log('encoded char', encodedChar)
             message += encodedChar;
             // rotors = setReverseRotorRotations(input, rotors);
             rotors = rotors.reverse()
@@ -45,8 +46,8 @@ const handleDecoding = (input, rotors) => {
             //Need to figure out this line, the reverse needs to hapen but the count of index is messed up if you change the order in which it happen
         }
     }
-    console.log('message in decoding', message)
     message = decodeMechanicalSim(message)
+    console.log('decoded message', message)
     return message;
 
 };

@@ -35,19 +35,19 @@ const reflectorB = {
 }
 
 const reflect = (input) => {
-    console.log('in reflector', input)
+    // console.log('in reflector', input)
 
 
     if (Object.keys(reflectorB).includes(input)) {
         let checkKeys = Object.values(reflectorB)[Object.keys(reflectorB).indexOf(input)]
-        console.log(checkKeys)
+        // console.log(checkKeys)
         return checkKeys
     } else if (Object.values(reflectorB).includes(input)) {
         let checkValues = Object.keys(reflectorB)[Object.values(reflectorB).indexOf(input)]
-        console.log(checkValues)
+        // console.log(checkValues)
         return checkValues
     } else {
-        console.log('not part of reflector');
+        // console.log('not part of reflector');
         return input;
     }
 
