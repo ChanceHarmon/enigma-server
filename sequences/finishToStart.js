@@ -14,7 +14,7 @@ const decodePostReflector = require('./decodePostReflector.js');
 
 const finishToStart = (rotors, input) => {
     //Logging for visual input compared to output in terminal
-    console.log('original input', input)
+    // console.log('original input', input)
     //Historically the original enigma machine rotated the first rotor in the sequence before the 'key' actually made contact. So 'A' becomes 'B' before it is ever sent through the rotors.
     // rotors[0] = rotorRotateCCW(rotors[0])
 

@@ -15,7 +15,7 @@ const rotorRequestReset = (arr) => {
     while (arr[1].positions.inputSchedule[0][0] !== 'A') {
         rotorRotateCW(arr[0])
     }
-    console.log('arr after rest', arr[0].positions)
+    // console.log('arr after rest', arr[0].positions)
     return arr;
 
 }

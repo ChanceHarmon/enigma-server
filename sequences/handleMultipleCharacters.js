@@ -25,7 +25,7 @@ const rotorRotateCCW = require('../utilities/rotorRotateCCW.js')
 const startToFinish = require('./startToFinish.js')
 
 const handleMultipleCharacters = (str, rotors) => {
-
+    console.log('original input', str)
     //Clean up input string. We want to retain spaces but remove punctuation  characters that are not on the input board. Making it all upper case doesn't hurt
     const regex = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
     let removePunksKeepSpacing = str.replace(regex, '');
