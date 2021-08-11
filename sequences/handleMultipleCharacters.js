@@ -16,10 +16,10 @@ Run Function:
     Currently N/A
 */
 
-const rotorI = require('../original-rotors/rotorI.js')
-const rotorII = require('../original-rotors/rotorII.js')
-const rotorIII = require('../original-rotors/rotorIII.js')
-const rotorArray = [rotorI, rotorII, rotorIII];
+// const rotorI = require('../original-rotors/rotorI.js')
+// const rotorII = require('../original-rotors/rotorII.js')
+// const rotorIII = require('../original-rotors/rotorIII.js')
+// const rotorArray = [rotorI, rotorII, rotorIII];
 const rotorRotateCCW = require('../utilities/rotorRotateCCW.js')
 
 const startToFinish = require('./startToFinish.js')
@@ -56,5 +56,5 @@ const handleMultipleCharacters = (str, rotors) => {
 }
 // NC  BE M
 module.exports = handleMultipleCharacters;
-console.log('handle multi', handleMultipleCharacters('Find your happiness', rotorArray))
+// console.log('handle multi', handleMultipleCharacters('Find your happiness', rotorArray))
 

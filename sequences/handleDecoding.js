@@ -3,11 +3,11 @@
 const rotorRotateCW = require("../utilities/rotorRotateCW");
 const setReverseRotorRotations = require("../utilities/setReverseRotorRotations");
 const finishToStart = require("./finishToStart");
-const rotorI = require('../original-rotors/rotorI.js')
-const rotorII = require('../original-rotors/rotorII.js')
-const rotorIII = require('../original-rotors/rotorIII.js');
+// const rotorI = require('../original-rotors/rotorI.js')
+// const rotorII = require('../original-rotors/rotorII.js')
+// const rotorIII = require('../original-rotors/rotorIII.js');
 const decodeMechanicalSim = require("../utilities/decodeMechanicalSim");
-const rotorArray = [rotorI, rotorII, rotorIII];
+// const rotorArray = [rotorI, rotorII, rotorIII];
 
 /*
 Function Purpose:
@@ -52,4 +52,4 @@ const handleDecoding = (input, rotors) => {
 };
 
 module.exports = handleDecoding;
-console.log(handleDecoding('BSOI BWFN BZSJPSRHF', rotorArray))
+// console.log(handleDecoding('BSOI BWFN BZSJPSRHF', rotorArray))
