@@ -4,8 +4,8 @@ const rotorOutputPreReflector = require("../utilities/rotorOutputPreReflector");
 
 const decodePreReflector = (rotors, input) => {
 
+    console.log('decode pre reflector', input, rotors[0].positions.inputSchedule)
     const findStartIndex = (str) => {
-        // console.log(str, rotors[0])
         for (let i = 0; i < rotors[0].positions.inputSchedule.length; i++) {
             if (str === rotors[0].positions.inputSchedule[i][0]) {
                 return i

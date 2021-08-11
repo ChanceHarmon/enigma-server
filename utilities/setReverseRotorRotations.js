@@ -24,7 +24,7 @@ Run Function:
 //Helper function for length to make true rotations of rotors
 const findLengthMinusWhiteSpace = str => {
     let actual = 0;
-    console.log(str)
+    console.log('string on findminwows', str)
     for (let i = 0; i < str.length; i++) {
         if (str[i] !== ' ') {
             actual += 1
@@ -37,9 +37,10 @@ const setReverseRotorRotations = (input, rotors) => {
     let actual = findLengthMinusWhiteSpace(input);
     console.log('actual in set rotors for decode', actual)
     for (let i = 0; i < actual; i++) {
+        console.log('times rotate ran')
         rotors[0] = rotorRotateCCW(rotors[0])
     }
-    console.log(rotors[0].positions.inputSchedule, rotors[0].positions.outputSchedule)
+    console.log('rotor 1 after rotate cycle to reverse', rotors[0].positions.inputSchedule, rotors[0].positions.outputSchedule)
     return rotors;
 };
 module.exports = setReverseRotorRotations;
