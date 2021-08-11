@@ -5,7 +5,8 @@ const setReverseRotorRotations = require("../utilities/setReverseRotorRotations"
 const finishToStart = require("./finishToStart");
 const rotorI = require('../original-rotors/rotorI.js')
 const rotorII = require('../original-rotors/rotorII.js')
-const rotorIII = require('../original-rotors/rotorIII.js')
+const rotorIII = require('../original-rotors/rotorIII.js');
+const decodeMechanicalSim = require("../utilities/decodeMechanicalSim");
 const rotorArray = [rotorI, rotorII, rotorIII];
 
 /*
@@ -26,24 +27,29 @@ Run Function:
 const handleDecoding = (input, rotors) => {
     //set rotors up
     rotors = setReverseRotorRotations(input, rotors);
-
+    console.log('rotors after string reverse', rotors[0].positions.inputSchedule)
     //I think I need to loop backwards from the end of the input, so this is just a thought/test loop compared to output
     let message = '';
 
     for (let i = input.length - 1; i >= 0; i--) {
+        // console.log('decode parent loop', 'i', i, 'input[i\'s]', rotors[0].positions.inputSchedule[0], rotors[1].positions.inputSchedule[0], rotors[2].positions.inputSchedule[0])
         if (input[i] === ' ') {
             message += input[i];
         } else {
             let encodedChar = finishToStart(rotors, input[i])
-            console.log(encodedChar)
+            console.log('encoded char', encodedChar)
             message += encodedChar;
+            // rotors = setReverseRotorRotations(input, rotors);
+            rotors = rotors.reverse()
             rotors[0] = rotorRotateCW(rotors[0]);
+            //Need to figure out this line, the reverse needs to hapen but the count of index is messed up if you change the order in which it happen
         }
     }
     console.log('message in decoding', message)
+    message = decodeMechanicalSim(message)
     return message;
 
 };
 
 module.exports = handleDecoding;
-console.log(handleDecoding('HZ', rotorArray))
+console.log(handleDecoding('BSOI BWFN BZSJPSRHF', rotorArray))
