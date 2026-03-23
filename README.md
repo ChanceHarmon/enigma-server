@@ -69,4 +69,4 @@ Separating concerns between encoding logic, configuration, and request handling 
 
 ## Notes  
 
-This project was originally deployed, but the hosted version is no longer active. It can be run locally using the instructions above.
+This project is deployed at https://enigma-server-lkeg.onrender.com. It can also be run locally using the instructions above.
